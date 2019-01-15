@@ -1,5 +1,5 @@
 <?php
-func reply_msg($txtin,$replyToken)
+function reply_msg($txtin,$replyToken)
 {
  $access_token = ‘0m3Aahxa+/i0bXe2QXF5JREOkIerEzseZOTJBKQ/ULQvoHXR+Y4TFsvEbiJ/yk7KNfiH2TjobG9J8E0fe0aB71meAGNe3gunTm27OoDLrGXrtAfbsNRqhg6eFE68zK903swb/J4lFcrVHMM/1bFLxwdB04t89/1O/w1cDnyilFU=
 ’;
