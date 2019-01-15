@@ -1,9 +1,9 @@
 <?php
-function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
+function reply_msg($txtin,$replyToken)
 {
  $access_token = ‘0m3Aahxa+/i0bXe2QXF5JREOkIerEzseZOTJBKQ/ULQvoHXR+Y4TFsvEbiJ/yk7KNfiH2TjobG9J8E0fe0aB71meAGNe3gunTm27OoDLrGXrtAfbsNRqhg6eFE68zK903swb/J4lFcrVHMM/1bFLxwdB04t89/1O/w1cDnyilFU=
 ’;
- $messages = [‘type’ => ‘text’,’text’ => $txtin];//สร้างตัวแปร 
+ $messages = [‘type’ => ‘text’,’text’ => $txtin];
  $url = ‘https://api.line.me/v2/bot/message/reply’;
  $data = [
  ‘replyToken’ => $replyToken,
@@ -21,8 +21,6 @@ function reply_msg($txtin,$replyToken)//สร้างข้อความแ�
  curl_close($ch);
  echo $result . “\r\n”;
 }
-
-// รับข้อมูล
 $content = file_get_contents(‘php://input’);
 $events = json_decode($content, true);
 if (!is_null($events[‘events’])) 
